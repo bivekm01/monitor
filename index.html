@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Attendance Monitoring</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="container">
+        <img src="logo.jpeg" alt="University Logo" class="logo">
+        <h1 class="title">University Attendance Monitoring</h1>
+        <button class="login-btn" id="loginBtn">Login</button>
+    </div>
+
+    <!-- Popup Modal -->
+
+     <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2>Select Login Type</h2>
+      <div class="options">
+        <button class="option-btn" id="studentLoginBtn">Student Login</button>
+        <button class="option-btn" id="facultyLoginBtn">Faculty Login</button>
+      </div>
+    </div>
+  </div>
+
+ <!-- Student Login Modal -->
+<div class="modal" id="studentModal">
+  <div class="modal-content">
+    <span class="close" id="closeStudent">&times;</span>
+    <h2>Student Login</h2>
+    <input type="text" id="studentId" placeholder="Enter Student ID">
+    <input type="password" id="studentPassword" placeholder="Enter Password">
+    <button class="option-btn" id="studentSubmit">Login</button>
+  </div>
+</div>
+
+<!-- Faculty Login Modal -->
+<div class="modal" id="facultyModal">
+  <div class="modal-content">
+    <span class="close" id="closeFaculty">&times;</span>
+    <h2>Faculty Login</h2>
+    <input type="text" id="facultyId" placeholder="Enter Faculty ID">
+    <input type="password" id="facultyPassword" placeholder="Enter Password">
+    <button class="option-btn" id="facultySubmit">Login</button>
+  </div>
+</div>
+
+
+  <!-- Dashboard -->
+  <div class="dashboard" id="dashboard">
+    <div class="profile-card">
+    <img id="studentPhoto" src="student.jpg" alt="Profile Photo" class="profile-pic">
+    <h2 id="studentName"></h2>
+    <p id="studentInfo"></p>
+  </div>
+
+  <h3>Attendance Report</h3>
+  <table id="attendanceTable">
+    <thead>
+      <tr>
+        <th>Subject</th>
+        <th>Attendance %</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <button class="back-btn" id="backBtn">← Back</button>
+
+
+  </div>
+
+  <!-- Student Dashboard Scanner Modal -->
+<div id="scannerModal" class="modal">
+  <div class="modal-content">
+    <span id="closeScanner">&times;</span>
+    <h2>Scan Faculty QR</h2>
+    <div id="reader" style="width:300px;"></div>
+  </div>
+</div>
+
+<!-- Script include -->
+<script src="https://unpkg.com/html5-qrcode"></script>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

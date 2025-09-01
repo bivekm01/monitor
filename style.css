@@ -1,0 +1,185 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #6a11cb, #2575fc);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  color: white;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 20px;
+  animation: bounce 2s infinite;
+}
+
+.title {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.login-btn {
+  padding: 12px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  background: white;
+  color: #2575fc;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+}
+
+.login-btn:hover {
+  background: #2575fc;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background: white;
+  color: #333;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 15px;
+  width: 300px;
+  text-align: center;
+  animation: slideDown 0.5s ease;
+}
+
+.modal-content input {
+  width: 90%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.close {
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.option-btn {
+  margin: 10px;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  background: #2575fc;
+  color: white;
+  transition: 0.3s;
+}
+
+.option-btn:hover {
+  background: #6a11cb;
+  transform: scale(1.1);
+}
+
+/* Dashboard */
+.dashboard {
+  display: none;
+  text-align: center;
+  color: white;
+}
+
+#welcomeMsg {
+  font-size: 30px;
+  margin-top: 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes slideDown {
+  from {transform: translateY(-50px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+
+@keyframes bounce {
+  0%, 100% {transform: translateY(0);}
+  50% {transform: translateY(-10px);}
+}
+
+
+.back-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  padding: 8px 16px;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.back-btn:hover {
+  background: #222;
+}
+
+
+
+.dashboard {
+  display: none;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.profile-card {
+  margin-top: 20px;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #4CAF50;
+  margin-bottom: 10px;
+}
+
+#attendanceTable {
+  margin: 20px auto;
+  width: 80%;
+  border-collapse: collapse;
+}
+
+#attendanceTable th, #attendanceTable td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+#attendanceTable th {
+  background: #4CAF50;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
